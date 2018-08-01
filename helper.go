@@ -39,8 +39,8 @@ type Node struct {
 	namespaceValueKeys map[string]string
 }
 
-func (h *Helper) Request(method string, body interface{}) (string, []byte, error) {
-	if req, err := http.NewRequest("POST", h.serviceURL, h.getRequestXMLBody(method, body)); err != nil {
+func (h *Helper) Request(body interface{}) (string, []byte, error) {
+	if req, err := http.NewRequest("POST", h.serviceURL, h.getRequestXMLBody(body)); err != nil {
 		return "", nil, err
 	} else {
 		cli := new(http.Client)
@@ -54,9 +54,8 @@ func (h *Helper) Request(method string, body interface{}) (string, []byte, error
 	}
 }
 
-
-func (h *Helper) Request2(method string, body interface{}, respContent interface{}) (string, error) {
-	if req, err := http.NewRequest("POST", h.serviceURL, h.getRequestXMLBody(method, body)); err != nil {
+func (h *Helper) Request2(body interface{}, respContent interface{}) (string, error) {
+	if req, err := http.NewRequest("POST", h.serviceURL, h.getRequestXMLBody(body)); err != nil {
 		return "", err
 	} else {
 		cli := new(http.Client)
@@ -73,8 +72,8 @@ func (h *Helper) Request2(method string, body interface{}, respContent interface
 	}
 }
 
-func (h *Helper) RequestTest(method string, body interface{}) (string, error) {
-	if req, err := http.NewRequest("POST", h.serviceURL, h.getRequestXMLBody(method, body)); err != nil {
+func (h *Helper) RequestTest(body interface{}) (string, error) {
+	if req, err := http.NewRequest("POST", h.serviceURL, h.getRequestXMLBody(body)); err != nil {
 		return "", err
 	} else {
 		cli := new(http.Client)
@@ -91,21 +90,12 @@ func (h *Helper) RequestTest(method string, body interface{}) (string, error) {
 	}
 }
 
-func (h *Helper) getRequestXMLBody(method string, body interface{}) (io.Reader) {
+func (h *Helper) getRequestXMLBody(body interface{}) (io.Reader) {
 	envelope := createSoapEnvelope(body)
 	buffer := &bytes.Buffer{}
 	encoder := xml.NewEncoder(buffer)
 	encoder.Encode(envelope)
-	fmt.Println("----------!!!>>>>>>>>>\n\r", string(buffer.Bytes()), "\n\r----------!!!<<<<<<<<<")
 	return buffer
-
-	//xmlFMT := `<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><%s xmlns="http://www.w3.org/2001/XMLSchema-instance" xmlns:i="%s">%s</%s></s:Body></s:Envelope>`
-	//xmlStrParamsPart := ``
-	//for k, v := range params {
-	//	xmlStrParamsPart += fmt.Sprintf("<%s xmlns=\"\">%s</%s>", k, v, k)
-	//}
-	//xmlFMT = fmt.Sprintf(xmlFMT, method, h.namespace, xmlStrParamsPart, method)
-	//return bytes.NewBuffer([]byte(xmlFMT))
 }
 
 func createSoapEnvelope(body interface{}) *SOAPEnvelope {
