@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="418e18ab-8bfd-41b1-838b-533404e9dc13" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper.go" beforeDir="false" afterPath="$PROJECT_DIR$/helper.go" afterDir="false" />
-    </list>
+    <list default="true" id="418e18ab-8bfd-41b1-838b-533404e9dc13" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +14,8 @@
       <file leaf-file-name="helper.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/helper.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-510">
-              <caret line="46" column="49" lean-forward="true" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
+            <state relative-caret-position="587">
+              <caret line="74" column="35" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -63,7 +60,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="20" />
     <option name="y" value="-16" />
     <option name="width" value="1400" />
@@ -110,7 +107,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -176,8 +172,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/helper.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="46" column="49" lean-forward="true" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
+        <state relative-caret-position="587">
+          <caret line="74" column="35" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="35" />
         </state>
       </provider>
     </entry>
